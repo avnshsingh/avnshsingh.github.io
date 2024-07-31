@@ -1,0 +1,74 @@
+---
+import { Icon } from "astro-icon/components";
+import projects from "../../collections/projects.json";
+import PageHeading from "../../components/page-heading.astro";
+import Layout from "../../layouts/main.astro";
+import { techNameMapping } from "../../components/about-experience.astro";
+
+export async function getStaticPaths() {
+  return projects.map(project => ({
+    params: { name: project.name },
+    props: { ...project },
+  }));
+}
+
+console.log("params", Astro.params);
+console.log("props", Astro.props);
+const { name } = Astro.params;
+const { image, description, techStack, url, sourceCode, tags } = Astro.props;
+const [featured] = tags;
+console.log("featured", featured);
+---
+
+<Layout title="About Me">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading title={name} description={description} />
+
+    <img src={image} class="relative z-30 w-full my-5 rounded-xl" />
+
+    <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">Tech Stack</h2>
+    <div class="flex items-center gap-2 flex-wrap">
+      {
+        techStack &&
+          techStack.map((tech: string) => {
+            return (
+              <div class="flex flex-col justify-between items-center py-1 cursor-pointer">
+                <Icon name={tech} color={"blue"} size={25} />
+                <p class="text-sm font-light text-neutral-600 dark:text-neutral-400 hover:font-bold">
+                  {techNameMapping[tech]}
+                </p>
+              </div>
+            );
+          })
+      }
+    </div>
+
+    <h2
+      class="mt-2 mb-2 text-2xl font-bold lg:mt-5 sm:mt-3 dark:text-neutral-200"
+    >
+      View
+    </h2>
+    <div class="flex items-center gap-4">
+      <div
+        class="flex flex-col justify-between items-center py-1 cursor-pointer"
+      >
+        <Icon name="github" color={"skyblue"} size={30} />
+        <p
+          class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:font-bold"
+        >
+          <a href={sourceCode} target="_blank">Source Code</a>
+        </p>
+      </div>
+      <div
+        class="flex flex-col justify-between items-center py-1 cursor-pointer"
+      >
+        <Icon name="link" color={"skyblue"} size={30} />
+        <p
+          class="text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:font-bold"
+        >
+          <a href={url} target="_blank">Deployed Version</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,10 +1,10 @@
 ---
-const { link, text } = Astro.props;
+const { link, text, type } = Astro.props;
 ---
 
 <a
   href={link}
-  class="inline-flex w-auto px-4 py-2 mt-5 text-xs font-semibold duration-300 ease-out border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900"
+  class={`inline-flex w-auto px-4 py-2 mt-5 text-xs font-semibold duration-300 ease-out border rounded-full ${type === "secondary" ? "bg-neutral-100 dark:bg-neutral-800 dark:text-white text-neutral-900 hover:border-neutral-300 border-neutral-100 dark:hover:border-neutral-600 hover:bg-neutral-200 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 hover:text-neutral-700" : "bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900"}`}
 >
   {text}
 </a>

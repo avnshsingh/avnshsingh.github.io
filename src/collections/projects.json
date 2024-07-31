@@ -1,20 +1,20 @@
 [
-	{
-		"name": "Email.ML",
-		"description": "Minimalist temporary Email.",
-		"image": "/assets/images/projects/email.ml.png",
-		"url": "https://email.ml"
-	},
-	{
-		"name": "DNS.Surf",
-		"description": "Querying DNS Resolution Results in Different Regions Worldwide.",
-		"image": "/assets/images/projects/dns.surf.png",
-		"url": "https://dns.surf"
-	},
-	{
-		"name": "HTML.ZONE",
-		"description": "Web Toolbox.",
-		"image": "/assets/images/projects/html.zone.png",
-		"url": "https://html.zone"
-	}
+  {
+    "name": "Crypto Tracker",
+    "description": "This app lets you track any cryptocurrency prices in realtime with the help of CoinGecko API.",
+    "image": "/assets/images/projects/cryptotracker.png",
+    "url": "https://avinash-crypto-red.netlify.app",
+    "sourceCode": "https://github.com/avnshsingh/crypt-tracker-app",
+    "techStack": ["react", "framermotion", "mui"],
+    "tags": ["featured"]
+  },
+  {
+    "name": "Tin Dog",
+    "description": "A tinder clone landing page for dogs built using HTML and css",
+    "image": "/assets/images/projects/tindog.png",
+    "url": "https://www.avinashs.in/tindog/",
+    "techStack": ["html", "css"],
+    "sourceCode": "https://github.com/avnshsingh/tindog",
+    "tags": []
+  }
 ]

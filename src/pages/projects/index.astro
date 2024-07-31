@@ -1,0 +1,138 @@
+---
+import projects from "../../collections/projects.json";
+import PageHeading from "../../components/page-heading.astro";
+import Project from "../../components/project.astro";
+import Layout from "../../layouts/main.astro";
+
+console.log("projects", projects);
+
+const featuredProjects = projects.filter(project =>
+  project.tags.includes("featured")
+);
+console.log("featured", featuredProjects);
+---
+
+<Layout
+  title="My Projects"
+  metaDescription="Explore my projects page, all the projects that I've worked on are built with best practices in full-stack and mobile app development"
+  metaKeywords="Software Engineer, MERN Stack, React Native, Next.js, Full-Stack Development, Mobile App Development, JavaScript, Node.js, Express.js, MongoDB, Frontend Development, Backend Development, Web Development, Mobile Development, Coding Tips, Programming Tutorials"
+>
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="My Projects"
+      description="Here are some of the current projects I've been working on. I really enjoy creating new projects and coming up with new ideas. I'm always working on something new, so check back often!"
+    />
+    <div class="flex items-center gap-4 mt-2">
+      <button
+        id="featuredButton"
+        class="text-xs bg-neutral-100 dark:bg-neutral-800 font-bold text-neutral-600 dark:text-neutral-100 trackign-widest border border-blue-500 rounded-md p-2"
+        >Featured Projects</button
+      >
+      <button
+        id="allButton"
+        class="text-xs font-normal text-neutral-600 dark:text-neutral-100 trackign-widest border border-rose-300 rounded-md p-2"
+        >All Projects</button
+      >
+    </div>
+
+    <div
+      class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
+      id="featuredProjects"
+    >
+      {
+        featuredProjects.map(project => {
+          return (
+            <Project
+              name={project.name}
+              description={project.description}
+              image={project.image}
+              url={project.url}
+              tags={project.tags}
+            />
+          );
+        })
+      }
+    </div>
+    <div
+      class="hidden z-50 items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
+      id="allProjects"
+    >
+      {
+        projects.map(project => {
+          return (
+            <Project
+              name={project.name}
+              description={project.description}
+              image={project.image}
+              url={project.url}
+              tags={project.tags}
+            />
+          );
+        })
+      }
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const featuredButton = document.querySelector("#featuredButton");
+  const allButton = document.querySelector("#allButton");
+  const featuredProjects = document.querySelector("#featuredProjects");
+  const allProjects = document.querySelector("#allProjects");
+  featuredButton &&
+    featuredButton.addEventListener("click", () => {
+      featuredProjects && featuredProjects.classList.remove("hidden");
+      allProjects && allProjects.classList.add("hidden");
+
+      if (featuredButton) {
+        featuredButton.classList.remove("font-normal", "border-rose-300");
+        featuredButton.classList.add(
+          "font-bold",
+          "border-blue-500",
+          "bg-neutral-100",
+          "dark:bg-neutral-800"
+        );
+      }
+
+      if (allButton) {
+        allButton.classList.remove(
+          "font-bold",
+          "border-blue-500",
+          "bg-neutral-200",
+          "dark:bg-neutral-800"
+        );
+        allButton.classList.add("font-normal", "border-rose-300");
+      }
+    });
+  allButton &&
+    allButton.addEventListener("click", () => {
+      if (allProjects) {
+        allProjects.classList.remove("hidden");
+        allProjects.classList.add("grid");
+      }
+      if (allButton) {
+        allButton.classList.remove("font-normal", "border-rose-300");
+        allButton.classList.add(
+          "font-bold",
+          "border-blue-500",
+          "bg-neutral-200",
+          "dark:bg-neutral-800"
+        );
+      }
+      if (featuredButton) {
+        featuredButton.classList.remove(
+          "font-bold",
+          "border-blue-500",
+          "bg-neutral-100",
+          "dark:bg-neutral-800"
+        );
+        featuredButton.classList.add(
+          "font-normal",
+          "border-rose-300",
+          "dark:bg-neutral-900"
+        );
+      }
+
+      featuredProjects && featuredProjects.classList.add("hidden");
+    });
+</script>

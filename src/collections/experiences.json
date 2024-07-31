@@ -1,23 +1,77 @@
 [
-	{
-		"dates": "June 2018 · Present",
-		"role": "Front-end Engineer",
-		"company": "Full Truck Alliance",
-		"description": "Responsible for customer service and CRM system front-end development.",
-		"logo": "/assets/images/experiences/fta.ico"
-	},
-	{
-		"dates": "July 2015 · June 2018",
-		"role": "Front-end Engineer",
-		"company": "YOHO!",
-		"description": "Responsible for mobile front-end development of e-commerce platform.",
-		"logo": "/assets/images/experiences/yoho.ico"
-	},
-	{
-		"dates": "September 2014 · July 2015 ",
-		"role": "Node.JS Developer",
-		"company": "WuLian",
-		"description": "Intern, involved in the development of Internet of Things cloud systems.",
-		"logo": "/assets/images/experiences/wulian.ico"
-	}
+  {
+    "dates": "July 2023 · July 2024",
+    "role": "Software Engineer",
+    "company": "Cordana Ecosystem",
+    "description": "Responsible for customer service and CRM system front-end development.",
+    "logo": "/assets/images/experiences/cordana.jpeg",
+    "descriptionBullets": [
+      "Developed a dashboard for doctors to manage fellow doctors and patients, utilizing React, Shadcn, Tanstack Query, and TypeScript.",
+      "Developed a mobile app for patients to track their health data and monitor nutrient information, built with React Native, Tanstack Query, and TypeScript.",
+      "Worked on backend of the application using Firebase Cloud Functions with Node.js, Express, and TypeScript."
+    ],
+    "techStack": [
+      "react",
+      "reactnative",
+      "tanstackquery",
+      "shadcn",
+      "tailwindcss",
+      "typescript",
+      "node",
+      "express",
+      "firebase"
+    ]
+  },
+  {
+    "dates": "APR 2023 · June 2023",
+    "role": "Software Engineer",
+    "company": "101 Deploy",
+    "description": "Responsible for mobile front-end development of e-commerce platform.",
+    "logo": "/assets/images/experiences/101deploy.jpeg",
+    "techStack": [
+      "react",
+      "reactnative",
+      "tanstackquery",
+      "shadcn",
+      "tailwindcss",
+      "typescript",
+      "node",
+      "express",
+      "firebase"
+    ],
+    "descriptionBullets": []
+  },
+  {
+    "dates": "January 2023 · April 2023 ",
+    "role": "Software Engineer",
+    "company": "Bridgeness Technologies",
+    "description": "Intern, involved in the development of Internet of Things cloud systems.",
+    "descriptionBullets": [
+      "Built the mobile app for brand agents to manage influencers using React Native",
+      "Worked on their website using Next.js and did SEO as well.",
+      "Built REST APIs using Node.js, written AWS Lambda function using serverless framework, added payment gateway and other critical features."
+    ],
+    "logo": "/assets/images/experiences/infosecbridge.jpeg",
+    "techStack": [
+      "react",
+      "redux",
+      "reactnative",
+      "nextjs",
+      "awslambda",
+      "node",
+      "sql"
+    ]
+  },
+  {
+    "dates": "January 2022 · January 2023 ",
+    "role": "Full Stack Developer",
+    "company": "AccioJob",
+    "description": "Intern, involved in the development of Internet of Things cloud systems.",
+    "descriptionBullets": [
+      "I have primarily learned fullstack development in the MERN stack and have worked on projects related to it",
+      "Hands‑on experience with various projects using the MERN stack"
+    ],
+    "logo": "/assets/images/experiences/acciojob.jpeg",
+    "techStack": ["react", "node", "express", "mongodb"]
+  }
 ]

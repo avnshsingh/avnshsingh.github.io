@@ -1,10 +1,13 @@
 ---
-const { name, description, url, image } = Astro.props;
+const { name, description, url, image, tags } = Astro.props;
+console.log("props", Astro.props);
+// target="_blank"
+
+const [featured] = tags;
 ---
 
 <a
-  href={url}
-  target="_blank"
+  href={`/projects/${name}`}
   class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-3 group h-100 rounded-2xl"
 >
   <span
@@ -55,6 +58,9 @@ const { name, description, url, image } = Astro.props;
               ></g
             ></g
           ></svg
+        >
+        <span class="ml-2 border border-fuchsia-500 rounded-md px-2"
+          >{featured ? "Featured ⭐️" : ""}</span
         >
       </span>
       <span class="text-sm text-neutral-600 dark:text-neutral-400"

@@ -12,12 +12,9 @@ export async function getStaticPaths() {
   }));
 }
 
-console.log("params", Astro.params);
-console.log("props", Astro.props);
 const { name } = Astro.params;
 const { image, description, techStack, url, sourceCode, tags } = Astro.props;
 const [featured] = tags;
-console.log("featured", featured);
 ---
 
 <Layout title="About Me">

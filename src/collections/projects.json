@@ -1,5 +1,31 @@
 [
   {
+    "name": "Carepulse",
+    "description": "Carepulse ia a healthcare platform. Where user can create their appoints and doctors can manage them using admin dashboard",
+    "image": "/assets/images/projects/carepluse.webp",
+    "url": "https://carepulse-puce-zeta.vercel.app",
+    "sourceCode": "https://github.com/avnshsingh/carepulse",
+    "techStack": [
+      "nextjs",
+      "shadcn",
+      "tailwindcss",
+      "zod",
+      "reacthookform",
+      "typescript",
+      "appwrite"
+    ],
+    "tags": ["featured"]
+  },
+  {
+    "name": "Avinash's Portfolio",
+    "description": "This is a portfolio website of avinash singh built using Astro.",
+    "image": "/assets/images/projects/avinashsin.webp",
+    "url": "https://www.avinashs.in",
+    "sourceCode": "#",
+    "techStack": ["astro", "tailwindcss", "typescript"],
+    "tags": ["featured"]
+  },
+  {
     "name": "Crypto Tracker",
     "description": "This app lets you track any cryptocurrency prices in realtime with the help of CoinGecko API.",
     "image": "/assets/images/projects/cryptotracker.png",

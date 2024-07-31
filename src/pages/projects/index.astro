@@ -4,12 +4,9 @@ import PageHeading from "../../components/page-heading.astro";
 import Project from "../../components/project.astro";
 import Layout from "../../layouts/main.astro";
 
-console.log("projects", projects);
-
 const featuredProjects = projects.filter(project =>
   project.tags.includes("featured")
 );
-console.log("featured", featuredProjects);
 ---
 
 <Layout

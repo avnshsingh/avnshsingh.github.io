@@ -6,9 +6,7 @@ dateFormatted: Jul 14th, 2024
 metaKeywords: browser, ai, image
 ---
 
-Yo, so I've been digging into this whole AI thing for front-end development lately, and stumbled upon this cool Transformers.js example. Turned it into a sweet little tool, check it out!
-
-Basically, it uses Transformers.js in a WebWorker to tap into WebGPU and run this RMBG-1.4 model. Long story short, you can now use AI to nuke image backgrounds right in your browser. And get this, it only takes half a second to process a 4K image on my M1 PRO!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellendus voluptates et corporis doloremque repellat dolore deleniti dolor, provident, excepturi vitae cum consequatur incidunt voluptas animi reprehenderit iusto laboriosam id ut ullam tenetur perspiciatis aliquid pariatur? Consequuntur asperiores quos ea illum iste earum quis pariatur facilis eligendi molestias, doloribus dolorem.
 
 Here's the link to the tool: [https://html.zone/background-remover](https://html.zone/background-remover)
 
